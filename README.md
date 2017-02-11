@@ -20,14 +20,22 @@ https://www.youtube.com/watch?v=7K5qkB90RzI
 Track2:
 https://www.youtube.com/watch?v=6oR3BuE_IWM&t=33s
 
+
+
+[//]: # (Image References)
+[image1]: ./examples/center_2016_12_01_13_30_48_287.jpg 
+[image2]: ./examples/Cropped-Image-Center.png
+[image3]: ./examples/Cropped-and-Resized-Image-Center.png
+[image4]: ./examples/nvidia_end_to_end_learning.jpg
+ 
 Normal Center Image:
-![alt tag] (https://github.com/nrlchow/Behavioral-Cloning-Project/tree/master/examples/center_2016_12_01_13_30_48_287.jpg) 
+![alt text][image1]
 
-Cropped Image:
-![alt tag] (https://github.com/nrlchow/Behavioral-Cloning-Project/tree/master/examples/Cropped-Image-Center.png) 
+Cropped Image: 
+![alt text][image2]
 
-Cropped and Resized Image Center:
-![alt tag] (https://github.com/nrlchow/Behavioral-Cloning-Project/tree/master/examples/Cropped-and-Resized-Image-Center.png) 
+Cropped and Resized Center Image 
+![alt text][image3]
 
 ###Files Submitted & Code Quality
 
@@ -159,7 +167,7 @@ Here is a visualition of model architecture
 
 Nvidia end to end learning CNN Architecture:
 
-![alt tag] (https://github.com/nrlchow/Behavioral-Cloning-Project/tree/master/examples/nvidia_end_to_end_learning.jpg)
+![alt text][image4]
 
 
 ####3. Creation of the Training Set & Training Process
