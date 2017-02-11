@@ -11,8 +11,9 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
-Video Reference
-You can see how the car performs on an unseen track in a simualted environement here : 
+Video Reference:
+
+You can see how the car performs on an unseen track in a simulated environment here : 
 
 Track1: 
 https://www.youtube.com/watch?v=7K5qkB90RzI
