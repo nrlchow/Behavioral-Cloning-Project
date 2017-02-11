@@ -11,12 +11,14 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
+Video Reference
+https://www.youtube.com/watch?v=7K5qkB90RzI
 
-[//]: # (Image References)
+https://www.youtube.com/watch?v=6oR3BuE_IWM&t=33s
 
-[image1]: ./examples/center_2016_12_01_13_30_48_287.jpg "Normal Center Image"
-[image2]: ./examples/Cropped-Image-Center.png "Cropped Image"
-[image3]: ./examples/Cropped-and-Resized-Image-Center.png "Cropped and Resized Image Center"
+examples/center_2016_12_01_13_30_48_287.jpg "Normal Center Image"
+examples/Cropped-Image-Center.png "Cropped Image"
+examples/Cropped-and-Resized-Image-Center.png "Cropped and Resized Image Center"
 
 ###Files Submitted & Code Quality
 
@@ -28,9 +30,8 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * writeup_report.md summarizing the results
 
-####2. Submssion includes functional code
-Using the Udacity provided simulator and
- my drive.py file, the car can be driven autonomously around the both tracks by executing python drive.py model.h5
+####2. Submission includes functional code
+Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the both tracks by executing python drive.py model.h5
 
 
 ####3. Submssion code is usable and readable
@@ -106,79 +107,48 @@ Exponential linear unit (ELU) was chosen as the activation function and applied 
 In order to prevent overfitting, dropout with 40% is applied on all of the fully connected layers.
 I used Adam optimizer with a learning rate of 1e-5 and used Mean squared error (mse) to train the model. Batch size was set to 32 and number of epochs to 50. 
 
-Model Summary
-____________________________________________________________________________________________________
-Layer (type)                     Output Shape          Param #     Connected to                     
-====================================================================================================
-lambda_1 (Lambda)                (None, 32, 32, 3)     0           lambda_input_1[0][0]             
-____________________________________________________________________________________________________
-convolution2d_1 (Convolution2D)  (None, 16, 16, 24)    1824        lambda_1[0][0]                   
-____________________________________________________________________________________________________
-elu_1 (ELU)                      (None, 16, 16, 24)    0           convolution2d_1[0][0]            
-____________________________________________________________________________________________________
-maxpooling2d_1 (MaxPooling2D)    (None, 15, 15, 24)    0           elu_1[0][0]                      
-____________________________________________________________________________________________________
-convolution2d_2 (Convolution2D)  (None, 8, 8, 36)      21636       maxpooling2d_1[0][0]             
-____________________________________________________________________________________________________
-elu_2 (ELU)                      (None, 8, 8, 36)      0           convolution2d_2[0][0]            
-____________________________________________________________________________________________________
-maxpooling2d_2 (MaxPooling2D)    (None, 7, 7, 36)      0           elu_2[0][0]                      
-____________________________________________________________________________________________________
-convolution2d_3 (Convolution2D)  (None, 4, 4, 48)      43248       maxpooling2d_2[0][0]             
-____________________________________________________________________________________________________
-elu_3 (ELU)                      (None, 4, 4, 48)      0           convolution2d_3[0][0]            
-____________________________________________________________________________________________________
-maxpooling2d_3 (MaxPooling2D)    (None, 3, 3, 48)      0           elu_3[0][0]                      
-____________________________________________________________________________________________________
-convolution2d_4 (Convolution2D)  (None, 3, 3, 64)      27712       maxpooling2d_3[0][0]             
-____________________________________________________________________________________________________
-elu_4 (ELU)                      (None, 3, 3, 64)      0           convolution2d_4[0][0]            
-____________________________________________________________________________________________________
-maxpooling2d_4 (MaxPooling2D)    (None, 2, 2, 64)      0           elu_4[0][0]                      
-____________________________________________________________________________________________________
-convolution2d_5 (Convolution2D)  (None, 2, 2, 64)      36928       maxpooling2d_4[0][0]             
-____________________________________________________________________________________________________
-elu_5 (ELU)                      (None, 2, 2, 64)      0           convolution2d_5[0][0]            
-____________________________________________________________________________________________________
-maxpooling2d_5 (MaxPooling2D)    (None, 1, 1, 64)      0           elu_5[0][0]                      
-____________________________________________________________________________________________________
-flatten_1 (Flatten)              (None, 64)            0           maxpooling2d_5[0][0]             
-____________________________________________________________________________________________________
-dense_1 (Dense)                  (None, 1164)          75660       flatten_1[0][0]                  
-____________________________________________________________________________________________________
-elu_6 (ELU)                      (None, 1164)          0           dense_1[0][0]                    
-____________________________________________________________________________________________________
-dropout_1 (Dropout)              (None, 1164)          0           elu_6[0][0]                      
-____________________________________________________________________________________________________
-dense_2 (Dense)                  (None, 100)           116500      dropout_1[0][0]                  
-____________________________________________________________________________________________________
-elu_7 (ELU)                      (None, 100)           0           dense_2[0][0]                    
-____________________________________________________________________________________________________
-dropout_2 (Dropout)              (None, 100)           0           elu_7[0][0]                      
-____________________________________________________________________________________________________
-dense_3 (Dense)                  (None, 50)            5050        dropout_2[0][0]                  
-____________________________________________________________________________________________________
-elu_8 (ELU)                      (None, 50)            0           dense_3[0][0]                    
-____________________________________________________________________________________________________
-dropout_3 (Dropout)              (None, 50)            0           elu_8[0][0]                      
-____________________________________________________________________________________________________
-dense_4 (Dense)                  (None, 10)            510         dropout_3[0][0]                  
-____________________________________________________________________________________________________
-elu_9 (ELU)                      (None, 10)            0           dense_4[0][0]                    
-____________________________________________________________________________________________________
-dropout_4 (Dropout)              (None, 10)            0           elu_9[0][0]                      
-____________________________________________________________________________________________________
-dense_5 (Dense)                  (None, 1)             11          dropout_4[0][0]                  
-====================================================================================================
-Total params: 329,079
-Trainable params: 329,079
-Non-trainable params: 0
-____________________________________________________________________________________________________
+#### Model Summary
+    ____________________________________________________________________________________________________
+
+	Layer (type)                     Output Shape          Param #     Connected to                     
+	lambda_1 (Lambda)                (None, 32, 32, 3)     0           lambda_input_1[0][0]             
+	convolution2d_1 (Convolution2D)  (None, 16, 16, 24)    1824        lambda_1[0][0]                   
+	elu_1 (ELU)                      (None, 16, 16, 24)    0           convolution2d_1[0][0]            
+	maxpooling2d_1 (MaxPooling2D)    (None, 15, 15, 24)    0           elu_1[0][0]                      
+	convolution2d_2 (Convolution2D)  (None, 8, 8, 36)      21636       maxpooling2d_1[0][0]             
+	elu_2 (ELU)                      (None, 8, 8, 36)      0           convolution2d_2[0][0]            
+	maxpooling2d_2 (MaxPooling2D)    (None, 7, 7, 36)      0           elu_2[0][0]                      
+	convolution2d_3 (Convolution2D)  (None, 4, 4, 48)      43248       maxpooling2d_2[0][0]             
+	elu_3 (ELU)                      (None, 4, 4, 48)      0           convolution2d_3[0][0]            
+	maxpooling2d_3 (MaxPooling2D)    (None, 3, 3, 48)      0           elu_3[0][0]                      
+	convolution2d_4 (Convolution2D)  (None, 3, 3, 64)      27712       maxpooling2d_3[0][0]             
+	elu_4 (ELU)                      (None, 3, 3, 64)      0           convolution2d_4[0][0]            
+	maxpooling2d_4 (MaxPooling2D)    (None, 2, 2, 64)      0           elu_4[0][0]                      
+	convolution2d_5 (Convolution2D)  (None, 2, 2, 64)      36928       maxpooling2d_4[0][0]             
+	elu_5 (ELU)                      (None, 2, 2, 64)      0           convolution2d_5[0][0]            
+	maxpooling2d_5 (MaxPooling2D)    (None, 1, 1, 64)      0           elu_5[0][0]                      
+	flatten_1 (Flatten)              (None, 64)            0           maxpooling2d_5[0][0]             
+	dense_1 (Dense)                  (None, 1164)          75660       flatten_1[0][0]                  
+	elu_6 (ELU)                      (None, 1164)          0           dense_1[0][0]                    
+	dropout_1 (Dropout)              (None, 1164)          0           elu_6[0][0]                      
+	dense_2 (Dense)                  (None, 100)           116500      dropout_1[0][0]                  
+	elu_7 (ELU)                      (None, 100)           0           dense_2[0][0]                    
+	dropout_2 (Dropout)              (None, 100)           0           elu_7[0][0]                      
+	dense_3 (Dense)                  (None, 50)            5050        dropout_2[0][0]                  
+	elu_8 (ELU)                      (None, 50)            0           dense_3[0][0]                    
+	dropout_3 (Dropout)              (None, 50)            0           elu_8[0][0]                      
+	dense_4 (Dense)                  (None, 10)            510         dropout_3[0][0]                  
+	elu_9 (ELU)                      (None, 10)            0           dense_4[0][0]                    
+	dropout_4 (Dropout)              (None, 10)            0           elu_9[0][0]                      
+	dense_5 (Dense)                  (None, 1)             11          dropout_4[0][0]                  
+	Total params: 329,079
+	Trainable params: 329,079
+	Non-trainable params: 0
 
 
 Here is a visualition of model architecture 
 
-[image1]: ./examples/nvidia_end_to_end_learning.jpg "nvidia end to end learning CNN Architecture"
+examples/nvidia_end_to_end_learning.jpg "nvidia end to end learning CNN Architecture"
 
 
 ####3. Creation of the Training Set & Training Process
@@ -191,7 +161,7 @@ After the collection process, I have 50016 number of data points.
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. 
 The ideal number of epochs was 50 as evidenced by below training result. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
-Here is a result of the trained model.
+Here is the result of the trained model.
 ____________________________________________________________________________________________________
     Epoch 1/50
     50016/50016 [==============================] - 50s - loss: 0.0449 - val_loss: 0.0290
