@@ -16,11 +16,10 @@ Video Reference:
 You can see how the car performs on an unseen track in a simulated environment here : 
 
 Track1: 
-https://www.youtube.com/watch?v=7K5qkB90RzI
+[![Alt text](https://img.youtube.com/vi/7K5qkB90RzI/0.jpg)](https://www.youtube.com/watch?v=7K5qkB90RzI)
 
 Track2:
-https://www.youtube.com/watch?v=6oR3BuE_IWM&t=33s
-
+[![Alt text](https://img.youtube.com/vi/6oR3BuE_IWM&t=33s/0.jpg)](https://www.youtube.com/watch?v=6oR3BuE_IWM&t=33s)
 
 
 [//]: # (Image References)
@@ -164,7 +163,7 @@ I used Adam optimizer with a learning rate of 1e-5 and used Mean squared error (
 	Non-trainable params: 0
 
 
-Here is a visualition of model architecture 
+Here is a visualisation of model architecture 
 
 Nvidia end to end learning CNN Architecture:
 
