@@ -12,13 +12,22 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 Video Reference
+You can see how the car performs on an unseen track in a simualted environement here : 
+
+Track1: 
 https://www.youtube.com/watch?v=7K5qkB90RzI
 
+Track2:
 https://www.youtube.com/watch?v=6oR3BuE_IWM&t=33s
 
-examples/center_2016_12_01_13_30_48_287.jpg "Normal Center Image"
-examples/Cropped-Image-Center.png "Cropped Image"
-examples/Cropped-and-Resized-Image-Center.png "Cropped and Resized Image Center"
+Normal Center Image:
+![alt tag] (https://github.com/nrlchow/Behavioral-Cloning-Project/tree/master/examples/center_2016_12_01_13_30_48_287.jpg) 
+
+Cropped Image:
+![alt tag] (https://github.com/nrlchow/Behavioral-Cloning-Project/tree/master/examples/Cropped-Image-Center.png) 
+
+Cropped and Resized Image Center:
+![alt tag] (https://github.com/nrlchow/Behavioral-Cloning-Project/tree/master/examples/Cropped-and-Resized-Image-Center.png) 
 
 ###Files Submitted & Code Quality
 
@@ -148,7 +157,9 @@ I used Adam optimizer with a learning rate of 1e-5 and used Mean squared error (
 
 Here is a visualition of model architecture 
 
-examples/nvidia_end_to_end_learning.jpg "nvidia end to end learning CNN Architecture"
+Nvidia end to end learning CNN Architecture:
+
+![alt tag] (https://github.com/nrlchow/Behavioral-Cloning-Project/tree/master/examples/nvidia_end_to_end_learning.jpg)
 
 
 ####3. Creation of the Training Set & Training Process
