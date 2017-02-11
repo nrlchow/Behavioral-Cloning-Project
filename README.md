@@ -15,11 +15,13 @@ Video Reference:
 
 You can see how the car performs on an unseen track in a simulated environment here : 
 
-Track1: 
+### Track1: 
+
 [![Alt text](https://img.youtube.com/vi/7K5qkB90RzI/0.jpg)](https://www.youtube.com/watch?v=7K5qkB90RzI)
 
-Track2:
-[![Alt text](https://img.youtube.com/vi/6oR3BuE_IWM&t=33s/0.jpg)](https://www.youtube.com/watch?v=6oR3BuE_IWM&t=33s)
+### Track2:
+
+[![Alt text](https://img.youtube.com/vi/6oR3BuE_IWM/0.jpg)](https://www.youtube.com/watch?v=6oR3BuE_IWM)
 
 
 [//]: # (Image References)
